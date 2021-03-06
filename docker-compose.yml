@@ -15,8 +15,8 @@ services:
         ports:
             - '80:80'
             - '443:443'
-        links:
-            - 'php'
+        depends_on:
+            - php
         volumes:
             - './app:/var/www/html'
             - './config/nginx:/etc/nginx/conf.d'
