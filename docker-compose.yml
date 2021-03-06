@@ -1,5 +1,6 @@
 version: '3'
 services:
+    php-fpm:
     php:
         # image: 'php:7.2-fpm'
         build:
@@ -15,8 +16,12 @@ services:
         ports:
             - '80:80'
             - '443:443'
-        depends_on:
+        links:
             - php
         volumes:
             - './app:/var/www/html'
             - './config/nginx:/etc/nginx/conf.d'
+        depends_on:
+            - php-fpm
+        links:
+            - php-fpm
