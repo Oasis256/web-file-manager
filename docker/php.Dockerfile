@@ -1,14 +1,23 @@
-FROM php:7.4
-RUN apt-get update \ 
-  && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-  # needed for gd
-  libfreetype6-dev \
-  libjpeg62-turbo-dev \
-  libpng-dev \
-  && rm -rf /var/lib/apt/lists/*
+FROM php:7-fpm
 
-# GD
-RUN docker-php-ext-configure gd --with-freetype --with-jpeg \
-  && docker-php-ext-install -j "$(nproc)" gd
+RUN docker-php-ext-install mysqli pdo pdo_mysql
+RUN apt-get update -y && apt-get install -y libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev \
+    libfreetype6-dev
+RUN apt-get update && \
+    apt-get install -y \
+        zlib1g-dev 
 
-RUN php -r 'var_dump(gd_info());'
+RUN docker-php-ext-install mbstring
+
+RUN apt-get install -y libzip-dev
+RUN docker-php-ext-install zip
+
+RUN docker-php-ext-configure gd --with-gd --with-webp-dir --with-jpeg-dir \
+    --with-png-dir --with-zlib-dir --with-xpm-dir --with-freetype-dir \
+    --enable-gd-native-ttf
+
+RUN docker-php-ext-install gd
+
+CMD ["php-fpm"]
+
+EXPOSE 9000
