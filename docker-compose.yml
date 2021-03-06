@@ -20,7 +20,5 @@ services:
         volumes:
             - './app:/var/www/html'
             - './config/nginx:/etc/nginx/conf.d'
-        depends_on:
-            - php-fpm
         links:
             - php-fpm
