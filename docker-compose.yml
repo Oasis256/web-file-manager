@@ -12,8 +12,8 @@ services:
         image: nginx:latest
         container_name: ${APP_NAME:?err}-nginx
         ports:
-            - '80:80'
-            - '443:443'
+            - '80:800'
+            - '443:4443'
         links:
             - php
         volumes:
