@@ -1,7 +1,7 @@
 version: '3'
 services:
     php:
-        image: 'php:7.24-fpm'
+        # image: 'php:7.24-fpm'
         build:
             context: ./docker
             dockerfile: php.Dockerfile
