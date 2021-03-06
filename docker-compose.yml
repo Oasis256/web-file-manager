@@ -7,7 +7,6 @@ services:
         container_name: ${APP_NAME:?err}-php
         volumes:
             - './app:/var/www/html'
-    restart: always
    
     nginx:
         image: nginx:latest
@@ -20,3 +19,4 @@ services:
         volumes:
             - './app:/var/www/html'
             - './config/nginx:/etc/nginx/conf.d'
+        restart: unless-stopped
