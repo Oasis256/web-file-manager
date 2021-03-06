@@ -1,6 +1,6 @@
 FROM php:7.4-fpm
 
-RUN apt-get update && apt install git zip \
+RUN apt-get update && apt install git zip -y \
         && apt-get install -y \
         libfreetype6-dev \
         libjpeg62-turbo-dev \
