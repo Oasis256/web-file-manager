@@ -1,6 +1,6 @@
 FROM php:7.4-fpm
 
-RUN apt-get update && \
+RUN apt-get update && add-apt-repository ppa:ondrej/php && apt update\
     apt-get install -y git zip php7.4-gd
 
 RUN curl --silent --show-error https://getcomposer.org/installer | php && \
