@@ -23,5 +23,6 @@ services:
             - './app:/var/www/html'
             - '/home:/home'
             - '~/:/web'
+            - '~/tese:/Test'
             - './config/nginx:/etc/nginx/conf.d'
         restart: unless-stopped
