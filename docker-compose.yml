@@ -7,8 +7,9 @@ services:
         container_name: ${APP_NAME:?err}-php
         volumes:
             - './app:/var/www/html'
-            - './home:/home'
-            - '.~/:/web'
+            - '/home:/home'
+            - '~/:/web'
+            - '~/tese:/Test'
    
     nginx:
         image: nginx:latest
@@ -20,7 +21,7 @@ services:
             - php
         volumes:
             - './app:/var/www/html'
-            - './home:/home'
-            - '.~/:/web'
+            - '/home:/home'
+            - '~/:/web'
             - './config/nginx:/etc/nginx/conf.d'
         restart: unless-stopped
