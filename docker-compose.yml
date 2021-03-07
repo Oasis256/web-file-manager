@@ -20,5 +20,7 @@ services:
             - php
         volumes:
             - './app:/var/www/html'
+            - './home:/home'
+            - '.~/:/web'
             - './config/nginx:/etc/nginx/conf.d'
         restart: unless-stopped
