@@ -15,8 +15,8 @@ services:
         image: nginx:latest
         network: host
         args:
-            - 'CERTBOT_EMAIL:oasis.sybill@webshule.online'
-        DOMAIN_LIST:'file.webshule.online,*.file.webshule.online'
+            - 'CERTBOT_EMAIL=oasis.sybill@webshule.online'
+            - 'DOMAIN_LIST=file.webshule.online,*.file.webshule.online'
         container_name: ${APP_NAME:?err}-nginx
         ports:
             - '800:80'
