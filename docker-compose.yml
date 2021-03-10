@@ -12,7 +12,8 @@ services:
     nginx:
         image: nginx:latest
         container_name: ${APP_NAME:?err}-nginx
-        #context: ./nginx
+        build:
+            context: ./nginx
             network: host
             args:
                 - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
