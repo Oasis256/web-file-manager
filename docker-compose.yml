@@ -3,7 +3,7 @@ services:
   nginx:
     container_name: ${APP_NAME:?err}-nginx
     build:
-      context: ./nginx
+      #context: ./nginx
       network: host
       args:
         - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
