@@ -8,6 +8,7 @@ services:
         volumes:
             - './app:/var/www/html'
             - './data/files:/home'
+            - 'letsencrypt:/etc/letsencrypt'
             
     nginx:
         image: nginx:latest
