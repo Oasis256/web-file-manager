@@ -25,4 +25,6 @@ services:
             - '~/:/web'
             - '~/tese:/Test'
             - './config/nginx:/etc/nginx/conf.d'
+    certbot:
+        image: certbot/certbot
         restart: unless-stopped
