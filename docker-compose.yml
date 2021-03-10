@@ -13,6 +13,10 @@ services:
    
     nginx:
         image: nginx:latest
+        network: host
+        args:
+            - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
+        DOMAIN_LIST=file.webshule.online,*.file.webshule.online #replace with your own domains
         container_name: ${APP_NAME:?err}-nginx
         ports:
             - '800:80'
@@ -25,4 +29,5 @@ services:
             - '~/:/web'
             - '~/tese:/Test'
             - './config/nginx:/etc/nginx/conf.d'
+            - 'letsencrypt:/etc/letsencrypt'
         restart: unless-stopped
