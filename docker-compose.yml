@@ -16,8 +16,8 @@ services:
             context: ./nginx
             network: host
             args:
-                - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
-                - 'DOMAIN_LIST=file.webshule.online,*.file.webshule.online' #replace with your own domains
+                - 'CERTBOT_EMAIL=oasis.sybill@webshule.online'
+                - 'DOMAIN_LIST=file.webshule.online,*.file.webshule.online'
         restart: always
         volumes:
             - './app:/var/www/html'
