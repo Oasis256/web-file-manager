@@ -12,7 +12,6 @@ services:
     nginx:
         image: nginx:latest
         container_name: ${APP_NAME:?err}-nginx
-        build:
         #context: ./nginx
             network: host
             args:
