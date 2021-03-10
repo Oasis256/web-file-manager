@@ -9,26 +9,26 @@ services:
             - './app:/var/www/html'
             - './data/files:/home'
             
-  nginx:
-    image: nginx:latest
-    container_name: ${APP_NAME:?err}-nginx
-    build:
-      #context: ./nginx
-      network: host
-      args:
-        - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
-        - 'DOMAIN_LIST=file.webshule.online,*.file.webshule.online' #replace with your own domains
-    restart: always
-    volumes:
-      - './app:/var/www/html'
-      - '/home:/home'
-      - '~/:/web'
-      - '~/tese:/Test'
-      - './config/nginx:/etc/nginx/conf.d'
-      - 'letsencrypt:/etc/letsencrypt'
-    ports:
-      - '80:80'
-      - '443:443'
-    links:
-      - php
-    restart: unless-stopped
+    nginx:
+        image: nginx:latest
+        container_name: ${APP_NAME:?err}-nginx
+        build:
+        #context: ./nginx
+            network: host
+            args:
+                - 'CERTBOT_EMAIL=oasis.sybill@webshule.online' #replace with your own email
+                - 'DOMAIN_LIST=file.webshule.online,*.file.webshule.online' #replace with your own domains
+        restart: always
+        volumes:
+            - './app:/var/www/html'
+            - '/home:/home'
+            - '~/:/web'
+            - '~/tese:/Test'
+            - './config/nginx:/etc/nginx/conf.d'
+            - 'letsencrypt:/etc/letsencrypt'
+        ports:
+            - '80:80'
+            - '443:443'
+        links:
+            - php
+        restart: unless-stopped
