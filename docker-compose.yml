@@ -25,7 +25,6 @@ services:
             - '~/:/web'
             - '~/tese:/Test'
             - './config/nginx:/etc/nginx/conf.d'
-            - 'letsencrypt:/etc/letsencrypt'
             - 'letsencrypt:/etc/letsencrypt:rw'
         ports:
             - '80:80'
