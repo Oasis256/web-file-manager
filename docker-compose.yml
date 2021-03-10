@@ -17,7 +17,7 @@ services:
             network: host
             args:
                 - 'CERTBOT_EMAIL=oasis.sybill@webshule.online'
-                - 'DOMAIN_LIST=file.webshule.online,www.file.webshule.online'
+                - 'DOMAIN_LIST=file.webshule.online www.file.webshule.online'
         restart: always
         volumes:
             - './app:/var/www/html'
