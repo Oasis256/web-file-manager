@@ -8,8 +8,8 @@ services:
         volumes:
             - './app:/var/www/html'
             - './data/files:/home'
+            - '/var/www:/Server'
             - '~/:/Web'
-            - '/var/www:~/Server'
    
     nginx:
         image: nginx:latest
