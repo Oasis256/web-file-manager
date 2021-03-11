@@ -10,6 +10,6 @@ ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/do
 RUN chmod +x /usr/local/bin/install-php-extensions && sync && \
     install-php-extensions mysqli pdo_mysql sockets imagick mcrypt swoole exif gettext memcache redis bz2 zip intl ldap memcached
 VOLUME /etc/letsencrypt
-CMD ["php-fpm", "sh", "-c", "cron && nginx -g 'daemon off;'"]
+CMD ["php-fpm"]
 
 EXPOSE 9000
