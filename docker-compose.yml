@@ -9,7 +9,7 @@ services:
             - './app:/var/www/html'
             - './data/files:/home'
             - '~/:/Web'
-            - '/var/www:Server'
+            - '/var/www:~/Server'
    
     nginx:
         image: nginx:latest
