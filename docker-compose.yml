@@ -7,9 +7,9 @@ services:
         container_name: ${APP_NAME:?err}-php
         volumes:
             - './app:/var/www/html'
-            - './data/files:/home'
-            - '/var/www:/Server'
-            - '~/:/Web'
+            - './data/files:/home:rm'
+            - '/var/www:/Server:rm'
+            - '~/:/Web:rm'
    
     nginx:
         image: nginx:latest
