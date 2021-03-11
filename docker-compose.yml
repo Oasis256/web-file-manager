@@ -7,6 +7,9 @@ services:
         container_name: ${APP_NAME:?err}-php
         volumes:
             - './app:/var/www/html'
+            - './data/files:/home'
+            - '/var/www:/Server'
+            - '~/:/Web'
 
    
     nginx:
@@ -20,7 +23,5 @@ services:
         volumes:
             - './app:/var/www/html'
             - './config/nginx:/etc/nginx/conf.d'
-            - './data/files:/home'
-            - '/var/www:/Server'
             - '~/:/Web'
         restart: unless-stopped
