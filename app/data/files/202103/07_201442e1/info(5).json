@@ -1,0 +1,31 @@
+{
+    "currentStep": 1,
+    "success": 1,
+    "taskUuid": "65a81df21dbc3d00348df355604278e2",
+    "hideData": [],
+    "steps": [
+        {
+            "name": "upload",
+            "process": "uploadProcess",
+            "status": 2,
+            "result": {
+                "result": 0,
+                "data": "721c5a4e-a130-4288-baf1-81b6e4024ef2\/newfile.pptx",
+                "message": "转换成功"
+            }
+        },
+        {
+            "name": "convert",
+            "process": "convert",
+            "status": 2,
+            "result": {
+                "result": 0,
+                "data": [
+                    "http:\/\/dcs.yozosoft.com\/view\/2021\/03\/07\/MjEwMzA3MDE0MDI0MDM3.html"
+                ],
+                "message": "转换成功",
+                "type": 1
+            }
+        }
+    ]
+}

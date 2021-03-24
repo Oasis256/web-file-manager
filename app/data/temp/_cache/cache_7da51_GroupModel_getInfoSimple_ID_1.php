@@ -1,0 +1,1 @@
+<?php exit;?>a:10:{s:7:"groupID";i:1;s:4:"name";s:6:"Admins";s:8:"parentID";i:0;s:11:"parentLevel";s:3:",0,";s:10:"extraField";s:0:"";s:4:"sort";i:0;s:7:"sizeMax";d:0;s:7:"sizeUse";i:0;s:10:"modifyTime";i:1615094345;s:10:"createTime";i:1615091024;}

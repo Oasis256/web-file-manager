@@ -1,0 +1,24 @@
+{
+    "currentStep": 1,
+    "success": 1,
+    "taskUuid": "515a2de7005c318fb935586a2b9c5309",
+    "hideData": [],
+    "steps": [
+        {
+            "name": "upload",
+            "process": "uploadProcess",
+            "status": 2,
+            "result": "<!DOCTYPE html PUBLIC \"-\/\/W3C\/\/DTD XHTML 1.1\/\/EN\" \"http:\/\/www.w3.org\/TR\/xhtml11\/DTD\/xhtml11.dtd\">\n\n<html xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\" xml:lang=\"en\">\n    <head>\n        <title>The page is temporarily unavailable<\/title>\n        <meta http-equiv=\"Content-Type\" content=\"text\/html; charset=UTF-8\" \/>\n        <style type=\"text\/css\">\n            \/*<![CDATA[*\/\n            body {\n                background-color: #fff;\n                color: #000;\n                font-size: 0.9em;\n                font-family: sans-serif,helvetica;\n                margin: 0;\n                padding: 0;\n            }\n            :link {\n                color: #c00;\n            }\n            :visited {\n                color: #c00;\n            }\n            a:hover {\n                color: #f50;\n            }\n            h1 {\n                text-align: center;\n                margin: 0;\n                padding: 0.6em 2em 0.4em;\n                background-color: #294172;\n                color: #fff;\n                font-weight: normal;\n                font-size: 1.75em;\n                border-bottom: 2px solid #000;\n            }\n            h1 strong {\n                font-weight: bold;\n                font-size: 1.5em;\n            }\n            h2 {\n                text-align: center;\n                background-color: #3C6EB4;\n                font-size: 1.1em;\n                font-weight: bold;\n                color: #fff;\n                margin: 0;\n                padding: 0.5em;\n                border-bottom: 2px solid #294172;\n            }\n            h3 {\n                text-align: center;\n                background-color: #ff0000;\n                padding: 0.5em;\n                color: #fff;\n            }\n            hr {\n                display: none;\n            }\n            .content {\n                padding: 1em 5em;\n            }\n            .alert {\n                border: 2px solid #000;\n            }\n\n            img {\n                border: 2px solid #fff;\n                padding: 2px;\n                margin: 2px;\n            }\n            a:hover img {\n                border: 2px solid #294172;\n            }\n            .logos {\n                margin: 1em;\n                text-align: center;\n            }\n            \/*]]>*\/\n        <\/style>\n    <\/head>\n\n    <body>\n        <h1><strong>nginx error!<\/strong><\/h1>\n\n        <div class=\"content\">\n\n            <h3>The page you are looking for is temporarily unavailable.  Please try again later.<\/h3>\n\n            <div class=\"alert\">\n                <h2>Website Administrator<\/h2>\n                <div class=\"content\">\n                    <p>Something has triggered an error on your\n                    website.  This is the default error page for\n                    <strong>nginx<\/strong> that is distributed with\n                    Fedora.  It is located\n                    <tt>\/usr\/share\/nginx\/html\/50x.html<\/tt><\/p>\n\n                    <p>You should customize this error page for your own\n                    site or edit the <tt>error_page<\/tt> directive in\n                    the <strong>nginx<\/strong> configuration file\n                    <tt>\/etc\/nginx\/nginx.conf<\/tt>.<\/p>\n\n                <\/div>\n            <\/div>\n\n            <div class=\"logos\">\n                <a href=\"http:\/\/nginx.net\/\"><img\n                    src=\"\/nginx-logo.png\"\n                    alt=\"[ Powered by nginx ]\"\n                    width=\"121\" height=\"32\" \/><\/a>\n\n                <a href=\"http:\/\/fedoraproject.org\/\"><img \n                    src=\"\/poweredby.png\"\n                    alt=\"[ Powered by Fedora ]\" \n                    width=\"88\" height=\"31\" \/><\/a>\n            <\/div>\n        <\/div>\n    <\/body>\n<\/html>\n"
+        },
+        {
+            "name": "convert",
+            "process": "convert",
+            "status": 2,
+            "result": {
+                "result": 8,
+                "data": "",
+                "message": "无效参数"
+            }
+        }
+    ]
+}

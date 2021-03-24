@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>newfile.pptx - Kodbox- Powered by kodbox</title>
+<script src="MjEwMzA3MDE0MTM4ODQ1.files/jquery-1.11.1.min.js"></script>
+<script src="MjEwMzA3MDE0MTM4ODQ1.files/jquery.touchSwipe.min.js"></script>
+<script src="MjEwMzA3MDE0MTM4ODQ1.files/meet.js"></script>
+    <link rel="stylesheet" href="MjEwMzA3MDE0MTM4ODQ1.files/style.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+      <link rel="stylesheet" href="./MjEwMzA3MDE0MTM4ODQ1.files/ie_compatible.css">
+    <![endif]-->
+  </head>
+  <body>
+    <DIV id="loading" class="loader">
+      <DIV></DIV>
+    </DIV>
+    <DIV id="pageNum" STYLE="width:100px;height:30px;line-height:30px;text-align:center;font-size:24px;color:#fff;position:fixed;left:50%;bottom:20px;display:block;background-color:#000;opacity:0.5;z-index:5;">
+      <SPAN></SPAN>
+    </DIV>
+    <DIV id="header">
+      <a id="sideBtn" class="hbtn">
+        <em></em>
+        <em></em>
+        <em></em>
+      </a>
+      <a id="fullScreen" class="pull-right hbtn" href="#">
+        <img width="40" height="40" src="./MjEwMzA3MDE0MTM4ODQ1.files/full.png">
+      </a>
+      <h2 id="title"></h2>
+    </DIV>
+    <DIV id="sidebar"></DIV>
+    <DIV id="mainbody">
+      <DIV id="prev">&lt;</DIV>
+      <DIV id="next">&gt;</DIV>
+      <table width="100%" height="100%">
+        <tr>
+          <td align="center">
+            <DIV class="showPic" STYLE="position:relative">
+              <DIV class="ppt-turn-left-mask"></DIV>
+              <DIV class="ppt-turn-right-mask"></DIV>
+              <DIV class="box_div"></DIV>
+            </DIV>
+          </td>
+        </tr>
+      </table>
+    </DIV>
+  </body>
+<script>
+var isFullScreen = true;
+var v = '{"name": "newfile.pptx","totalSize": 1,"curPage": 1,"totalPage": 1,"pageSize": 10,'
++'"data": ['
++' {'
++'     "url":  "MjEwMzA3MDE0MTM4ODQ1.files/1.jpg" ,'
++'     "thumbUrl": "MjEwMzA3MDE0MTM4ODQ1.files/1.jpg" '
++' }'
+ +']'
++'}';</script>
+<script src="./MjEwMzA3MDE0MTM4ODQ1.files/ppt_sd.js"></script>
+<script src="./MjEwMzA3MDE0MTM4ODQ1.files/base64.js"></script>
+<script src="./MjEwMzA3MDE0MTM4ODQ1.files/pagewatermark.js"></script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>userImport.csv - Kodbox- Powered by kodbox</title>
+    <link rel="stylesheet" href="./MjEwMzA3MDA3MDUwMzE1.files/bootstrap.min.css">
+    <link rel="stylesheet" href="./MjEwMzA3MDA3MDUwMzE1.files/bootstrap-responsive.min.css">
+    <!--[if (lt IE 9) & (!IEMobile)]>
+      <link rel="stylesheet" href="./MjEwMzA3MDA3MDUwMzE1.files/ie_compatible.css">
+    <![endif]-->
+    <link rel="stylesheet" href="./MjEwMzA3MDA3MDUwMzE1.files/style.css">
+    <link rel="stylesheet" href="./MjEwMzA3MDA3MDUwMzE1.files/stylesheet.css">
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/base64.js"></script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/jquery-1.11.1.min.js"></script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <DIV class="navbar navbar-inverse navbar-fixed-top">
+      <DIV class="navbar-inner">
+        <DIV class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <SPAN class="icon-bar"></SPAN>
+            <SPAN class="icon-bar"></SPAN>
+            <SPAN class="icon-bar"></SPAN>
+          </button>
+          <a class="brand lnk-file-title" href="javascript:void(0)" TITLE="userImport.csv">userImport.csv</a>
+          <DIV class="nav-collapse collapse" STYLE="height: 0px;">
+            <ul class="nav excel-tab-title">
+              <DIV class="left">
+                <a href="#" onClick="move1(0)">&lt;&lt;</a>
+              </DIV>
+              <DIV class="right">
+                <a href="#" onClick="move1(1)">&gt;&gt;</a>
+              </DIV>
+              <li class="active">
+                <a href="#tab1" data-toggle="tab">userImport</a>
+              </li>
+            </ul>
+          </DIV>
+        </DIV>
+      </DIV>
+    </DIV>
+    <DIV class="container-fluid container-fluid-content">
+      <DIV class="row-fluid">
+        <DIV class="span12" STYLE="width: auto; padding-right: 20px">
+          <DIV class="tab-content">
+            <DIV class="tab-pane active in" id="tab1">
+              <table border="0" cellpadding="1" cellspacing="0" nowrap="true" STYLE="border-collapse:collapse;table-layout:fixed" width="504" height="76">
+                <col width="72">
+                <col width="72">
+                <col width="72">
+                <col width="72">
+                <col width="72">
+                <col width="72">
+                <col width="72"><tr height="19"><td width="72" class="style1">��&frac14;�˺�(���&Psi;һ)</td><td width="72" class="style1">�ǳ�(&Psi;һ)</td><td width="72" class="style1">�Ա�</td><td width="72" class="style1">�ֻ���</td><td width="72" class="style1">����</td><td width="216" colspan="3" class="style1" style="mso-ignore:colspan">����(����)</td>
+</tr><tr height="19" height="19"><td class="style1">libai</td><td class="style1">���</td><td class="style1">��</td><td align="right" class="style1">13511111111</td><td class="style1">litaibai@163.com</td><td align="right" class="style1">666666</td>
+</tr><tr height="19" height="19"><td class="style1">dufu</td><td class="style1">�&Yuml;�</td><td class="style1">��</td><td align="right" class="style1">13511111112</td><td class="style1">duzimei@163.com</td><td align="right" class="style1">333333</td>
+</tr><tr height="19" height="19"><td class="style1">liqingzhao</td><td class="style1">������</td><td class="style1">Ů</td><td align="right" class="style1">13522222222</td><td class="style1">liqingzhao@126.com</td><td align="right" class="style1">112233</td>
+</tr>
+              </table>
+            </DIV>
+          </DIV>
+        </DIV>
+      </DIV>
+    </DIV>
+    <INPUT id="scale" type="hidden" value="1.0">
+<script>
+var basePath = "./MjEwMzA3MDA3MDUwMzE1.files";</script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/excel.js"></script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/base64.js"></script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/pagewatermark.js"></script>
+<script src="./MjEwMzA3MDA3MDUwMzE1.files/cZoom.js"></script>
+  </body>
+  <hr>
+  <DIV id="footer" STYLE="text-align:center">Powered by:
+    <a href="http://www.yozodcs.com">永中DCS</a>&nbsp;&nbsp;&nbsp;Email:
+    <a href="mailto:dcs@yozosoft.com">dcs@yozosoft.com</a>
+  </DIV>
+</html>

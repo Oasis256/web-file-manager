@@ -1,0 +1,31 @@
+{
+    "currentStep": 1,
+    "success": 1,
+    "taskUuid": "62323c39d880e0ed5ad2d527a76ece2e",
+    "hideData": [],
+    "steps": [
+        {
+            "name": "upload",
+            "process": "uploadProcess",
+            "status": 2,
+            "result": {
+                "result": 0,
+                "data": "6974f879-cebe-4a8f-8a65-a9410494e87b\/userImport.csv",
+                "message": "转换成功"
+            }
+        },
+        {
+            "name": "convert",
+            "process": "convert",
+            "status": 2,
+            "result": {
+                "result": 0,
+                "data": [
+                    "http:\/\/dcs.yozosoft.com\/view\/2021\/03\/07\/MjEwMzA3MDA3MDUwMzE1.html"
+                ],
+                "message": "转换成功",
+                "type": 1
+            }
+        }
+    ]
+}
