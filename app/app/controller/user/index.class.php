@@ -52,7 +52,7 @@ class userIndex extends Controller {
 			$pass = substr(md5('kodbox_'.$systemPassword),0,15);
 			$sessionSign = Mcrypt::decode($_REQUEST['accessToken'],$pass);
 			if(!$sessionSign){
-				show_json(LNG('common.loginTokenError'),false);
+				show_json(LNG('common.loginTokenError'),ERROR_CODE_LOGOUT);
 			}
 			Session::sign($sessionSign);
 		}
@@ -234,7 +234,7 @@ class userIndex extends Controller {
 		if(!$user['status']){
 			show_json(LNG('user.userEnabled'), ERROR_CODE_USER_INVALID);
 		}
-		$this->loginSuccess($user);
+		$this->loginSuccessUpdate($user);
 		show_json('ok',true,$this->accessToken());
 	}
 	private function loginWithToken(){
@@ -253,11 +253,15 @@ class userIndex extends Controller {
 		if ( !is_array($user) ) {
 			return show_json(LNG('user.pwdError'),false);
 		}
-
-		$user = Model("User")->getInfo($user['userID']);
-		$this->loginSuccess($user);
-		Model('User')->userEdit($user['userID'],array("lastLogin"=>time()));	// 更新登录时间
+		$this->loginSuccessUpdate($user);
 		return show_json('ok',true,$this->accessToken());
+	}
+	
+	// 更新登录时间
+	public function loginSuccessUpdate($user){
+		$this->loginSuccess($user);
+		Model('User')->userEdit($user['userID'],array("lastLogin"=>time()));
+		ActionCall('admin.log.loginLog');	// 登录日志
 	}
 
 	/**

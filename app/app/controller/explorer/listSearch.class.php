@@ -264,8 +264,9 @@ class explorerListSearch extends Controller{
 		return $result;
 	}
 	
-	static function parseSearch($param){
+	public function parseSearch($param){
 		if(!$param) return array();
+		$param  = ltrim($param,'/');
 		$all    = explode('@',$param);
 		$result = array();
 		foreach ($all as $item) {

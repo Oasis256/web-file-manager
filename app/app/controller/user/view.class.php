@@ -16,6 +16,7 @@ class userView extends Controller{
 				'phpVersion'	=> PHP_VERSION,
 				'appApi'		=> app_host_get(),
 				'APP_HOST'		=> APP_HOST,
+				'APP_HOST_LINK' => $this->config['APP_HOST_LINK'],
 				'ENV_DEV'		=> GLOBAL_DEBUG,
 				'staticPath'	=> STATIC_PATH,
 				'version'		=> KOD_VERSION,
@@ -142,6 +143,25 @@ class userView extends Controller{
 			// https://api.qrserver.com/v1/create-qr-code/?data=
 			header('location: https://api.pwmqr.com/qrcode/create/?url='.rawurlencode($url));
 		}
+	}
+	public function taskAction(){
+		$result = ActionCall('admin.task.taskActionRun',0);
+		show_json($result['result'],true);
+	}
+
+	// 插件说明
+	public function pluginDesc(){
+		$path = PLUGIN_DIR.KodIO::clear($this->in['app']).'/';
+		$lang = I18n::getType();
+		$file = $path.'readme.md';
+		if(file_exists($path.'readme_'.$lang.'.md')){
+			$file = $path.'readme_'.$lang.'.md';
+		}
+		$content = '';
+		if(file_exists($file)){
+			$content = file_get_contents($file);
+		}
+		echo $_GET['callback'].'("'.base64_encode($content).'")';
 	}
 	
 	//chrome安装: 必须https;serviceWorker引入处理;manifest配置; [manifest.json配置目录同sw.js引入];

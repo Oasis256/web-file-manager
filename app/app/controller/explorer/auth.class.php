@@ -212,8 +212,13 @@ class explorerAuth extends Controller {
 		}
 		
 		//不支持删除自己的桌面
-		if(trim($path,'/') == trim(MY_DESKTOP,'/') && $action == 'remove'){
-			return $this->errorMsg(LNG('explorer.desktopDelError'),1100);
+		if($action == 'remove'){
+			if(trim($path,'/') == trim(MY_DESKTOP,'/')){
+				return $this->errorMsg(LNG('explorer.desktopDelError'),1100);
+			}
+			if(trim($path,'/') == trim(MY_HOME,'/')){
+				return $this->errorMsg(LNG('explorer.pathNotSupport'),1100);
+			}
 		}
 		
 		// 纯虚拟路径只能列表; 不支持其他任何操作;

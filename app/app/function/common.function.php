@@ -561,6 +561,14 @@ function array_filter_by_field($array,$field,$value){
 	}
 	return $result;
 }
+function array_find_by_field($array,$field,$value){
+	if(!is_array($array) || !$array) return null;
+	foreach ($array as $val) {
+		if($val[$field] == $value) return $val;
+	}
+	return null;
+}
+
 
 /**
  * 删除数组子项的特定key的数据

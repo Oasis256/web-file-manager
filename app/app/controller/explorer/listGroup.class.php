@@ -95,19 +95,13 @@ class explorerListGroup extends Controller{
 	public function pathGroupAuthMake($groupID){
 		$groupInfo  = $this->modelGroup->getInfoSimple($groupID);//101
 		$selfGroup 	= Session::get("kodUser.groupInfo");
-		$selfGroup 	= array_to_keyvalue($selfGroup,'groupID');//自己所在的组
-		$parents = $this->model->parentLevelArray($groupInfo['parentLevel']);
-		$parents = array_reverse($parents);
-		foreach ($parents as $id) {
-			if($id == '1') return false;// 根部门;
-			if(isset($selfGroup[$id])){
-				return array(
-					'authValue' => intval($selfGroup[$id]['auth']['auth']),
-					'authInfo'  => $selfGroup[$id]['auth'],
-				);
-			}
+		$findGroup  = array_find_by_field($selfGroup,'groupID',$groupID);
+		if($findGroup){
+			return array(
+				'authValue' => intval($findGroup['auth']['auth']),
+				'authInfo'  => $findGroup['auth'],
+			);
 		}
-		// return false;
 		return Model("SourceAuth")->authDeepCheck($groupInfo['sourceInfo']['sourceID']);
 	}
 
