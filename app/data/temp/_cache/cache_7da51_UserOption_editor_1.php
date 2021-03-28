@@ -1,1 +1,1 @@
-<?php exit;?>a:0:{}
+<?php exit;?>a:1:{s:5:"theme";s:19:"tomorrow_night_blue";}
